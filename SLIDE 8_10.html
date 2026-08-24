@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clase 10 · Vocabulario — Cuidado postoperatorio · Entrenamiento</title>
+<style>
+/* =========================================================================
+   ESPAÑOL MÉDICO · CLASE 10 · VOCABULARIO — CUIDADO POSTOPERATORIO
+   Línea "Grafito y Ámbar".
+   ========================================================================= */
+:root{
+  --cream:#F7EED9; --cream-soft:#FBF6EA; --paper:#FFFDF9;
+  --ink:#36454F; --ink-soft:#5C6B74; --navy:#10233F;
+  --amber:#E8A33D; --amber-deep:#B87A1E;
+  --line:#E6DCC4; --line-soft:#EFE7D3;
+  --ok:#2E7D5B; --ok-bg:#E7F3EC; --ok-line:#BFE0CD;
+  --err:#C0392B; --err-bg:#FBEBE9; --err-line:#EBCBC6;
+  --shadow:0 1px 2px rgba(16,35,63,.05), 0 10px 28px rgba(16,35,63,.07);
+  --shadow-lg:0 18px 50px rgba(16,35,63,.14);
+  --r:14px;
+  --serif:Cambria,"Georgia",serif;
+  --sans:Calibri,"Segoe UI",system-ui,-apple-system,sans-serif;
+  --accent:#CF492C; --accent-ink:#93321F; --accent-tint:#FBEAE4; --accent-tint-2:#F6D9CE;
+}
+[data-theme="1"]{ --accent:#CF492C; --accent-ink:#93321F; --accent-tint:#FBEAE4; --accent-tint-2:#F6D9CE; }
+[data-theme="2"]{ --accent:#258079; --accent-ink:#155852; --accent-tint:#E4F1EF; --accent-tint-2:#CFE7E3; }
+[data-theme="3"]{ --accent:#215F9A; --accent-ink:#173F68; --accent-tint:#E5EEF7; --accent-tint-2:#CFE0F0; }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);line-height:1.55;
+  background:
+    radial-gradient(1100px 460px at 85% -6%, #FBF3DF 0%, transparent 60%),
+    radial-gradient(820px 460px at -6% 106%, #F3E8CC 0%, transparent 55%),
+    var(--cream);min-height:100vh}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;color:var(--navy)}
+a{color:var(--amber-deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+.topbar{position:sticky;top:0;z-index:40;background:rgba(247,238,217,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+.brand .logo{width:38px;height:38px;border-radius:10px;background:var(--amber);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:17px;box-shadow:var(--shadow)}
+.brand b{font-family:var(--serif);font-size:15px;color:var(--navy);display:block;line-height:1.1}
+.brand small{display:block;font-size:11px;font-weight:600;color:var(--ink-soft);letter-spacing:.05em;text-transform:uppercase}
+.topnav{margin-left:auto;display:flex;gap:3px;flex-wrap:wrap}
+.topnav a{font-size:12.5px;font-weight:600;color:var(--ink-soft);text-decoration:none;padding:7px 10px;border-radius:8px;transition:.15s}
+.topnav a:hover{background:var(--cream-soft);color:var(--amber-deep)}
+.gbar-shell{height:4px;background:var(--cream-soft)}
+.gbar{height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--amber-deep));transition:width .5s}
+
+.hero{padding:42px 0 6px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--amber-deep);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 15px;box-shadow:var(--shadow)}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber)}
+.hero h1{font-size:clamp(32px,5.4vw,52px);line-height:1.02;margin:16px 0 0;color:var(--navy)}
+.hero .tick{width:74px;height:4px;background:var(--amber);border-radius:3px;margin:14px 0 16px}
+.hero .lead{font-size:clamp(15px,2vw,18px);max-width:60ch;color:var(--ink);margin:0}
+
+.trainbox{margin:24px 0 8px;background:var(--navy);color:#fff;border-radius:18px;padding:22px 26px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.trainbox::after{content:"";position:absolute;right:-50px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(232,163,61,.35), transparent 70%)}
+.trainbox .tb-h{display:flex;align-items:center;gap:12px;position:relative}
+.trainbox .tb-ic{flex:none;width:42px;height:42px;border-radius:11px;background:var(--amber);display:grid;place-items:center;color:#3a2708}
+.trainbox h2{color:#fff;margin:0;font-size:20px}
+.trainbox .tb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;position:relative}
+@media(max-width:760px){.trainbox .tb-grid{grid-template-columns:1fr 1fr}}
+.tb-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:11px;padding:11px 13px;font-size:13px;color:#EAF0F8}
+.tb-item b{display:block;color:#fff;font-family:var(--serif);font-size:14px;margin-bottom:2px}
+
+.section{padding:38px 0 4px}
+.section-h{display:flex;align-items:center;gap:13px;margin-bottom:4px}
+.section-h .sn{flex:none;width:40px;height:40px;border-radius:11px;background:var(--amber);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:18px}
+.section-h h2{margin:0;font-size:25px}
+.section-sub{color:var(--ink-soft);font-size:14.5px;margin:0 0 18px}
+
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:720px){.vgrid{grid-template-columns:1fr}}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.vcard .vtop{display:flex;align-items:center;gap:13px;margin-bottom:8px}
+.vcard .vnum{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:16px}
+.vcard .vic{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent-tint);display:grid;place-items:center;color:var(--accent-ink)}
+.vcard .vic svg{width:22px;height:22px}
+.vcard h3{margin:0;font-size:17.5px;color:var(--accent-ink);flex:1}
+.vcard p{margin:0 0 10px;font-size:14.3px;color:var(--ink)}
+.vcard .ex{font-size:13.4px;color:var(--ink-soft);background:var(--accent-tint);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:8px 12px;font-style:italic}
+.vcard .ex::before{content:"“"}
+.vcard .ex::after{content:"”"}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;margin-bottom:18px;box-shadow:var(--shadow)}
+.card .chead{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.card .cnum{flex:none;width:30px;height:30px;border-radius:8px;background:var(--amber);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:14px}
+.card .chead h3{margin:0;font-size:19px}
+.card .chead .csub{margin-left:auto;font-size:12.5px;color:var(--ink-soft)}
+
+.match{display:grid;grid-template-columns:1fr 1.05fr;gap:20px}
+@media(max-width:760px){.match{grid-template-columns:1fr}}
+.defs{display:flex;flex-direction:column;gap:9px}
+.def{display:flex;gap:10px;align-items:flex-start;background:var(--cream-soft);border:1px solid var(--line);border-radius:10px;padding:10px 13px}
+.def .dnum{flex:none;width:24px;height:24px;border-radius:6px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.def .dt{font-size:13.7px;color:var(--ink)}
+.terms{display:flex;flex-direction:column;gap:9px}
+.term{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+.term .tw{flex:1;font-weight:700;color:var(--navy);font-size:14.3px}
+.term select{font-family:var(--sans);font-size:14px;border:1.5px solid var(--line);border-radius:8px;padding:6px 8px;background:var(--cream-soft);color:var(--ink);outline:none}
+.term select:focus{border-color:var(--amber)}
+.term.good{background:var(--ok-bg);border-color:var(--ok-line)}
+.term.bad{background:var(--err-bg);border-color:var(--err-line)}
+
+.q{padding:15px 0;border-top:1px dashed var(--line)}
+.q:first-of-type{border-top:0}
+.q .qn{display:inline-block;font-size:12px;font-weight:700;color:var(--amber-deep);background:var(--cream-soft);border-radius:6px;padding:1px 8px;margin-bottom:8px}
+.q .qtext{font-size:15.3px;color:var(--ink);margin:0 0 11px;font-weight:600}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:11px;align-items:flex-start;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--cream-soft);transition:.14s}
+.opt:hover{border-color:var(--amber);background:#fff}
+.opt input{margin-top:3px;accent-color:var(--amber)}
+.opt .ot{font-size:14.3px;color:var(--ink)}
+.opt.good{background:var(--ok-bg);border-color:var(--ok-line)}
+.opt.bad{background:var(--err-bg);border-color:var(--err-line)}
+.opt.miss{box-shadow:inset 0 0 0 1px var(--ok-line);border-color:var(--ok-line)}
+.expl{margin-top:9px;font-size:13.4px;border-radius:9px;padding:9px 12px;display:none}
+.expl.show{display:block}
+.expl.ok{background:var(--ok-bg);color:#255c3c;border:1px solid var(--ok-line)}
+.expl.no{background:var(--err-bg);color:#8f2f22;border:1px solid var(--err-line)}
+
+.wordbank{background:var(--cream-soft);border:1px solid var(--amber);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.wordbank .wb-h{font-family:var(--serif);font-weight:700;color:var(--amber-deep);font-size:14px;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:13px;font-weight:600;color:var(--navy);background:var(--paper);border:1px solid var(--amber);border-radius:999px;padding:5px 12px}
+.drill{display:flex;flex-direction:column;gap:12px}
+.ditem{border-top:1px dashed var(--line);padding-top:14px}
+.ditem:first-child{border-top:0;padding-top:0}
+.ditem .drow{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-size:15.3px;color:var(--ink);line-height:2}
+.ditem .dn{flex:none;width:24px;height:24px;border-radius:6px;background:var(--cream-soft);color:var(--amber-deep);display:grid;place-items:center;font-weight:700;font-size:12.5px}
+.gap-in{font-family:var(--sans);font-size:14.5px;color:var(--ink);background:var(--cream-soft);border:1.5px solid var(--line);border-radius:8px;padding:6px 11px;min-width:150px;outline:none}
+.gap-in:focus{border-color:var(--amber);background:#fff;box-shadow:0 0 0 3px rgba(232,163,61,.16)}
+.ditem.good .gap-in{border-color:var(--ok-line);background:var(--ok-bg)}
+.ditem.bad .gap-in{border-color:var(--err-line);background:var(--err-bg)}
+.dfb{font-size:13.2px;margin-top:7px;display:none}
+.dfb.show{display:block}
+.dfb.good{color:#255c3c}.dfb.bad{color:#8f2f22}
+.dfb .sol{font-weight:700;color:var(--amber-deep)}
+
+/* secuencia de fases */
+.seq{display:flex;flex-direction:column;gap:10px}
+.seqrow{display:flex;align-items:center;gap:13px;background:var(--cream-soft);border:1px solid var(--line);border-radius:11px;padding:12px 15px}
+.seqrow .sic{flex:none;width:36px;height:36px;border-radius:9px;background:var(--accent-tint);color:var(--accent-ink);display:grid;place-items:center}
+.seqrow .sic svg{width:20px;height:20px}
+.seqrow .sinfo{flex:1}
+.seqrow .sinfo b{font-family:var(--serif);color:var(--navy);font-size:15.5px;display:block}
+.seqrow .sinfo span{font-size:13px;color:var(--ink-soft)}
+.seqrow select{font-family:var(--sans);font-weight:700;font-size:14px;border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;background:var(--paper);color:var(--navy);outline:none}
+.seqrow.good{background:var(--ok-bg);border-color:var(--ok-line)}
+.seqrow.bad{background:var(--err-bg);border-color:var(--err-line)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;font-family:var(--sans);font-weight:700;font-size:14.5px;border-radius:11px;border:1px solid transparent;padding:11px 18px;transition:.16s;text-decoration:none}
+.btn.primary{background:var(--amber);color:#3A2708;box-shadow:var(--shadow)}
+.btn.primary:hover{background:var(--amber-deep);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn.ghost{background:var(--paper);color:var(--amber-deep);border-color:var(--line)}
+.btn.ghost:hover{background:var(--cream-soft);border-color:var(--amber)}
+.btn.mini{padding:8px 13px;font-size:13px}
+.exam-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}
+.score{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--ink-soft);font-weight:600}
+.prog{width:118px;height:8px;border-radius:5px;background:var(--cream-soft);overflow:hidden;border:1px solid var(--line)}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--amber-deep));transition:width .45s}
+
+.why{background:var(--navy);color:#fff;border-radius:18px;padding:24px 26px;box-shadow:var(--shadow-lg);margin:8px 0 46px}
+.why h3{color:#fff;margin:0 0 6px;font-size:20px}
+.why p{margin:0 0 16px;color:#CBD6E6;font-size:14.3px;max-width:70ch}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr 1fr}}
+.why-item{display:flex;gap:11px;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px}
+.why-item .wic{flex:none;width:38px;height:38px;border-radius:50%;background:var(--amber);color:#3a2708;display:grid;place-items:center}
+.why-item .wic svg{width:20px;height:20px}
+.why-item span{font-size:13.5px;font-weight:600;color:#fff}
+
+footer{border-top:1px solid var(--line);background:var(--cream-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:20px 24px}
+footer .copy{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:14px}
+footer .meta{font-size:12.3px;color:var(--ink-soft)}
+footer a.up{font-size:13px;font-weight:600;color:var(--amber-deep);text-decoration:none}
+
+:focus-visible{outline:3px solid rgba(232,163,61,.5);outline-offset:2px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{.topbar,.exam-bar .btn,footer a.up{display:none}}
+</style>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="logo">Em</span>
+      <span><b>Cuidado postoperatorio</b><small>Español Médico · Clase 10 · Vocabulario</small></span>
+    </a>
+    <nav class="topnav">
+      <a href="#vocab">Vocabulario</a>
+      <a href="#relaciona">Relaciona</a>
+      <a href="#reconoce">Reconoce</a>
+      <a href="#frases">Frases</a>
+      <a href="#fases">Fases</a>
+    </nav>
+  </div>
+  <div class="gbar-shell"><div class="gbar" id="gbar"></div></div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Clase 10 · Vocabulario</span>
+    <h1>Cuidado postoperatorio</h1>
+    <div class="tick"></div>
+    <p class="lead">Intervenciones clave para una recuperación segura y eficaz. Practica el vocabulario en contexto clínico con estas actividades interactivas y corrección inmediata.</p>
+
+    <div class="trainbox">
+      <div class="tb-h">
+        <span class="tb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v12H4z"/><path d="M9 9h6M9 13h4"/><path d="M8 21h8"/></svg></span>
+        <h2>Ejercicio interactivo del vocabulario</h2>
+      </div>
+      <div class="tb-grid">
+        <div class="tb-item"><b>Reconoce</b>situaciones clínicas</div>
+        <div class="tb-item"><b>Relaciona</b>conceptos y definiciones</div>
+        <div class="tb-item"><b>Completa</b>frases de informe</div>
+        <div class="tb-item"><b>Ordena</b>las fases de cicatrización</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vocab">
+  <div class="wrap">
+    <div class="section-h"><span class="sn">1</span><h2>Los 10 términos</h2></div>
+    <p class="section-sub">Estudia cada concepto con su definición y un ejemplo real en contexto clínico.</p>
+    <div class="vgrid" id="vgrid"></div>
+  </div>
+</section>
+
+<section class="section" id="relaciona">
+  <div class="wrap">
+    <div class="section-h"><span class="sn">2</span><h2>Relaciona conceptos</h2></div>
+    <p class="section-sub">Empareja cada término con su definición. Elige el número correcto.</p>
+    <div class="card">
+      <div class="chead"><span class="cnum">A</span><h3>Término y definición</h3><span class="csub">10 términos</span></div>
+      <div class="match"><div class="defs" id="mdefs"></div><div class="terms" id="mterms"></div></div>
+      <div class="exam-bar">
+        <button class="btn primary" id="mcheck">Comprobar</button>
+        <button class="btn ghost mini" id="mreset">Reiniciar</button>
+        <span class="score"><span class="prog"><i id="mbar"></i></span><span id="mscore">0 / 10</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reconoce">
+  <div class="wrap">
+    <div class="section-h"><span class="sn">3</span><h2>Reconoce el término</h2></div>
+    <p class="section-sub">Lee la situación clínica y elige el término correcto.</p>
+    <div class="card">
+      <div class="chead"><span class="cnum">B</span><h3>Situaciones postoperatorias</h3><span class="csub">8 preguntas</span></div>
+      <div id="rmcq"></div>
+      <div class="exam-bar">
+        <button class="btn primary" id="rcheck">Comprobar</button>
+        <button class="btn ghost mini" id="rreset">Reiniciar</button>
+        <span class="score"><span class="prog"><i id="rbar"></i></span><span id="rscore">0 / 8</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="frases">
+  <div class="wrap">
+    <div class="section-h"><span class="sn">4</span><h2>Completa las frases</h2></div>
+    <p class="section-sub">Escribe el término que falta en cada frase de informe. Se aceptan variantes sin tilde.</p>
+    <div class="wordbank"><div class="wb-h">Banco de términos</div><div class="chips" id="wchips"></div></div>
+    <div class="card">
+      <div class="chead"><span class="cnum">C</span><h3>Frases de informe</h3><span class="csub">10 frases</span></div>
+      <div class="drill" id="drill"></div>
+      <div class="exam-bar">
+        <button class="btn primary" id="dcheck">Comprobar</button>
+        <button class="btn ghost mini" id="dreveal">Ver soluciones</button>
+        <button class="btn ghost mini" id="dreset">Reiniciar</button>
+        <span class="score"><span class="prog"><i id="dbar"></i></span><span id="dscore">0 / 10</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fases">
+  <div class="wrap">
+    <div class="section-h"><span class="sn">5</span><h2>Ordena las fases de cicatrización</h2></div>
+    <p class="section-sub">Asigna la posición correcta (1, 2, 3) a cada fase de curación de la herida.</p>
+    <div class="card">
+      <div class="chead"><span class="cnum">D</span><h3>Del inicio a la maduración</h3><span class="csub">3 fases</span></div>
+      <div class="seq" id="seq"></div>
+      <div class="exam-bar">
+        <button class="btn primary" id="scheck">Comprobar</button>
+        <button class="btn ghost mini" id="sreset">Reiniciar</button>
+        <span class="score"><span class="prog"><i id="sbar"></i></span><span id="sscore">0 / 3</span></span>
+      </div>
+    </div>
+
+    <div class="why">
+      <h3>¿Por qué es importante?</h3>
+      <p>El cuidado postoperatorio adecuado reduce complicaciones, acelera la recuperación y mejora la calidad de vida del paciente.</p>
+      <div class="why-grid">
+        <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/></svg></span><span>Previene infecciones</span></div>
+        <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span>Reduce complicaciones</span></div>
+        <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2"/><path d="M18 4v5h-5M6 20v-5h5"/></svg></span><span>Favorece la recuperación</span></div>
+        <div class="why-item"><span class="wic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3.2"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6"/></svg></span><span>Mejora la calidad de vida</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="copy">© Catalina Espinosa Ramos</span>
+    <span class="meta">Español Médico · Clase 10 — Vocabulario: cuidado postoperatorio · Entrenamiento interactivo</span>
+    <a class="up" href="#top">↑ Volver arriba</a>
+  </div>
+</footer>
+
+<script>
+/* ===================== DATOS ===================== */
+const IC = {
+  inflam:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>',
+  grid:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M4 15h16M10 4v16M15 4v16"/>',
+  shield:'<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/>',
+  drenaje:'<path d="M7 3v7a5 5 0 0 0 10 0V3"/><path d="M12 18c1.4 1.2 1.4 3 0 4.2"/>',
+  pill:'<rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(45 12 12)"/><path d="M8.5 8.5l7 7"/>',
+  droplet:'<path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9Z"/>',
+  pulse:'<path d="M3 12h4l2-5 4 10 2-5h6"/>',
+  compress:'<path d="M4 12h6M14 12h6M8 8l-4 4 4 4M16 8l4 4-4 4"/>',
+  walk:'<circle cx="13" cy="4" r="2"/><path d="M13 7l-2 5 3 3 1 6M11 12l-4 2M15 14l3 2"/>',
+  enteral:'<path d="M6 3v8a2 2 0 0 0 2 2v8M6 3v4M8 3v4"/><path d="M17 3c-1.6 0-2 2.2-2 4.5S15.5 12 17 12v9"/>'
+};
+const TERMS = [
+  {n:"01", t:"Fase inflamatoria", ic:"inflam",
+   d:"Primera fase de curación: enrojecimiento, hinchazón y dolor.",
+   ex:"Es normal presentar inflamación leve durante los primeros días.",
+   clue:"En los primeros días la herida presenta enrojecimiento, hinchazón y dolor leves."},
+  {n:"02", t:"Fase proliferativa", ic:"grid",
+   d:"Segunda fase: se forma nuevo tejido.",
+   ex:"La herida continúa cerrándose y el tejido granula.",
+   clue:"Se forma tejido nuevo (granulación) y la herida sigue cerrándose."},
+  {n:"03", t:"Fase de maduración", ic:"shield",
+   d:"Última fase: el tejido cicatriza y se fortalece.",
+   ex:"La cicatriz mejora su resistencia durante varios meses.",
+   clue:"El tejido cicatriza y la cicatriz gana resistencia durante meses."},
+  {n:"04", t:"Drenaje quirúrgico", ic:"drenaje",
+   d:"Tubo que elimina líquidos acumulados y previene infecciones.",
+   ex:"El drenaje se retirará cuando el gasto sea mínimo.",
+   clue:"Tubo que evacua los líquidos acumulados en la zona operada."},
+  {n:"05", t:"Profilaxis antibiótica", ic:"pill",
+   d:"Uso preventivo de antibióticos contra infecciones postoperatorias.",
+   ex:"Se administra antes de la incisión y se suspende en 24 horas.",
+   clue:"Antibióticos administrados antes de operar para prevenir infecciones."},
+  {n:"06", t:"Hematoma postoperatorio", ic:"droplet",
+   d:"Acumulación de sangre en el sitio quirúrgico.",
+   ex:"El hematoma debe monitorizarse y drenarse si es necesario.",
+   clue:"Acumulación de sangre en la zona operada."},
+  {n:"07", t:"Tromboprofilaxis", ic:"pulse",
+   d:"Prevención de coágulos con medicamentos o dispositivos mecánicos.",
+   ex:"La deambulación precoz y la profilaxis disminuyen el riesgo de trombosis.",
+   clue:"Medidas (fármacos o mecánicas) para prevenir la formación de coágulos."},
+  {n:"08", t:"Compresión neumática intermitente", ic:"compress",
+   d:"Dispositivo que mejora la circulación y previene la trombosis.",
+   ex:"Se aplica especialmente en pacientes con movilidad reducida.",
+   clue:"Dispositivo que comprime las piernas para mejorar la circulación."},
+  {n:"09", t:"Rehabilitación postoperatoria", ic:"walk",
+   d:"Terapia física y ocupacional para recuperar la función.",
+   ex:"La rehabilitación temprana acelera la recuperación funcional.",
+   clue:"Terapia física y ocupacional para recuperar la función del paciente."},
+  {n:"10", t:"Nutrición enteral", ic:"enteral",
+   d:"Alimentación por sonda directa al estómago o intestino.",
+   ex:"Se indica cuando el paciente no puede alimentarse por vía oral.",
+   clue:"Alimentación mediante sonda al estómago o intestino."}
+];
+
+const DRILL = [
+  {pre:"Durante la fase ", post:", el paciente presenta enrojecimiento, hinchazón y dolor leves.", a:["inflamatoria"]},
+  {pre:"En la fase ", post:" se forma tejido nuevo y la herida granula.", a:["proliferativa"]},
+  {pre:"En la fase de ", post:", la cicatriz gana resistencia durante varios meses.", a:["maduración"]},
+  {pre:"Se colocó un ", post:" quirúrgico para evacuar los líquidos acumulados.", a:["drenaje"]},
+  {pre:"Se pautó ", post:" antibiótica antes de la incisión para prevenir infecciones.", a:["profilaxis"]},
+  {pre:"Se observó un ", post:" postoperatorio que deberá monitorizarse.", a:["hematoma"]},
+  {pre:"Se inició ", post:" con deambulación precoz para prevenir la trombosis.", a:["tromboprofilaxis"]},
+  {pre:"Se aplicó ", post:" neumática intermitente por la movilidad reducida del paciente.", a:["compresión"]},
+  {pre:"El paciente comenzó la ", post:" postoperatoria con terapia física.", a:["rehabilitación"]},
+  {pre:"Se indicó nutrición ", post:" por sonda al no tolerar la vía oral.", a:["enteral"]}
+];
+
+const RMCQ = [
+  {q:"En los primeros días la herida presenta enrojecimiento, hinchazón y dolor leves. ¿Qué fase es?", correct:"Fase inflamatoria"},
+  {q:"Aparece tejido nuevo (granulación) y la herida continúa cerrándose. ¿Qué fase es?", correct:"Fase proliferativa"},
+  {q:"Se coloca un tubo para evacuar líquidos acumulados de la zona operada. ¿Qué es?", correct:"Drenaje quirúrgico"},
+  {q:"Se administran antibióticos antes de la incisión para evitar infecciones. ¿Qué es?", correct:"Profilaxis antibiótica"},
+  {q:"Se detecta una acumulación de sangre en el sitio quirúrgico. ¿Qué complicación es?", correct:"Hematoma postoperatorio"},
+  {q:"Un dispositivo comprime las piernas para mejorar la circulación en un paciente encamado. ¿Qué es?", correct:"Compresión neumática intermitente"},
+  {q:"El paciente inicia terapia física y ocupacional para recuperar la función. ¿Qué es?", correct:"Rehabilitación postoperatoria"},
+  {q:"Como el paciente no puede comer por la boca, se le alimenta por una sonda al estómago. ¿Qué es?", correct:"Nutrición enteral"}
+];
+
+/* fases de cicatrización en orden correcto */
+const PHASES = [
+  {t:"Fase inflamatoria", d:"Enrojecimiento, hinchazón y dolor.", pos:1, ic:"inflam"},
+  {t:"Fase proliferativa", d:"Se forma tejido nuevo (granulación).", pos:2, ic:"grid"},
+  {t:"Fase de maduración", d:"El tejido cicatriza y se fortalece.", pos:3, ic:"shield"}
+];
+
+/* ===================== UTIL + PROGRESO ===================== */
+function esc(s){return (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function norm(s){return (s||"").toLowerCase().trim().replace(/\s+/g," ").normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+const TH=["1","2","3"];
+const TOTALS={m:10,r:8,d:10,s:3};
+const P={m:0,r:0,d:0,s:0};
+function setScore(id,bar,c,t,key){document.getElementById(id).textContent=c+" / "+t;document.getElementById(bar).style.width=(t?c/t*100:0)+"%";if(key){P[key]=c;refreshGlobal();}}
+function refreshGlobal(){let c=0,t=0;for(const k in TOTALS){t+=TOTALS[k];c+=P[k];}document.getElementById("gbar").style.width=(t?c/t*100:0)+"%";}
+
+/* ===================== VOCABULARIO ===================== */
+function renderVocab(){
+  document.getElementById("vgrid").innerHTML=TERMS.map((tm,i)=>`
+    <div class="vcard" data-theme="${TH[i%3]}">
+      <div class="vtop"><span class="vnum">${tm.n}</span>
+        <span class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[tm.ic]}</svg></span>
+        <h3>${esc(tm.t)}</h3></div>
+      <p>${esc(tm.d)}</p>
+      <div class="ex">${esc(tm.ex)}</div>
+    </div>`).join("");
+}
+
+/* ===================== EMPAREJAR ===================== */
+function renderMatch(defsId,termsId,items){
+  const order=shuffle(items.map((_,i)=>i));
+  document.getElementById(defsId).innerHTML=order.map((orig,pos)=>`
+    <div class="def"><span class="dnum">${pos+1}</span><span class="dt">${esc(items[orig].d)}</span></div>`).join("");
+  document.getElementById(termsId).innerHTML=items.map((it,i)=>`
+    <div class="term" data-i="${i}"><span class="tw">${esc(it.t)}</span>
+      <select aria-label="Definición para ${esc(it.t)}"><option value="">—</option>
+        ${order.map((_,pos)=>`<option value="${pos}">${pos+1}</option>`).join("")}</select></div>`).join("");
+  return order;
+}
+function checkMatch(termsId,order,items,sid,bar,key){
+  let c=0;
+  document.querySelectorAll("#"+termsId+" .term").forEach(t=>{
+    const i=+t.dataset.i; const sel=t.querySelector("select"); t.classList.remove("good","bad");
+    if(sel.value==="") return;
+    const ok=order[+sel.value]===i; t.classList.add(ok?"good":"bad"); if(ok) c++;
+  });
+  setScore(sid,bar,c,items.length,key);
+}
+
+/* ===================== MCQ ===================== */
+function buildMCQ(data){
+  const names=TERMS.map(t=>t.t);
+  return data.map(it=>{
+    const distract=shuffle(names.filter(n=>n!==it.correct)).slice(0,3);
+    const opts=shuffle([it.correct,...distract]);
+    return {q:it.q, o:opts, a:opts.indexOf(it.correct), correct:it.correct};
+  });
+}
+function renderMCQ(id,data,name){
+  document.getElementById(id).innerHTML=data.map((it,i)=>`
+    <div class="q" data-i="${i}"><span class="qn">${i+1}</span>
+      <p class="qtext">${esc(it.q)}</p>
+      <div class="opts">${it.o.map((o,j)=>`<label class="opt" data-j="${j}"><input type="radio" name="${name}-${i}"><span class="ot">${esc(o)}</span></label>`).join("")}</div>
+      <div class="expl"></div></div>`).join("");
+}
+function checkMCQ(id,data,sid,bar,key){
+  let c=0;
+  document.querySelectorAll("#"+id+" .q").forEach((q,i)=>{
+    const chosen=q.querySelector("input:checked"); const ex=q.querySelector(".expl");
+    q.querySelectorAll(".opt").forEach(o=>o.classList.remove("good","bad","miss"));
+    if(!chosen){ex.className="expl no show";ex.textContent="Selecciona una opción.";return;}
+    const j=+chosen.closest(".opt").dataset.j; const ok=j===data[i].a;
+    q.querySelectorAll(".opt")[data[i].a].classList.add(ok?"good":"miss");
+    if(!ok) chosen.closest(".opt").classList.add("bad");
+    ex.className="expl show "+(ok?"ok":"no");
+    ex.innerHTML=(ok?"✓ Correcto: ":"✗ La respuesta es: ")+"<b>"+esc(data[i].correct)+"</b>.";
+    if(ok) c++;
+  });
+  setScore(sid,bar,c,data.length,key);
+}
+function resetMCQ(id,sid,bar,total,key){
+  document.querySelectorAll("#"+id+" input").forEach(i=>i.checked=false);
+  document.querySelectorAll("#"+id+" .opt").forEach(o=>o.classList.remove("good","bad","miss"));
+  document.querySelectorAll("#"+id+" .expl").forEach(e=>e.className="expl");
+  setScore(sid,bar,0,total,key);
+}
+
+/* ===================== CLOZE ===================== */
+function renderDrill(){
+  document.getElementById("wchips").innerHTML=TERMS.map(t=>`<span class="chip">${esc(t.t)}</span>`).join("");
+  document.getElementById("drill").innerHTML=DRILL.map((it,i)=>`
+    <div class="ditem" data-i="${i}"><div class="drow"><span class="dn">${i+1}</span>
+        <span>${esc(it.pre)}</span>
+        <input class="gap-in" type="text" autocomplete="off" spellcheck="false" aria-label="Hueco ${i+1}">
+        <span>${esc(it.post)}</span></div><div class="dfb"></div></div>`).join("");
+}
+function checkDrill(reveal){
+  let c=0;
+  document.querySelectorAll("#drill .ditem").forEach((item,i)=>{
+    const inp=item.querySelector(".gap-in"); const fb=item.querySelector(".dfb");
+    item.classList.remove("good","bad");
+    const ok=DRILL[i].a.some(a=>norm(a)===norm(inp.value));
+    if(inp.value.trim()===""&&!reveal){fb.className="dfb";return;}
+    if(ok){item.classList.add("good");fb.className="dfb good show";fb.innerHTML="✓ Correcto.";c++;}
+    else{item.classList.add("bad");fb.className="dfb bad show";fb.innerHTML=`✗ Solución: <span class="sol">${esc(DRILL[i].a[0])}</span>.`;
+      if(reveal){inp.value=DRILL[i].a[0];item.classList.remove("bad");item.classList.add("good");c++;}}
+  });
+  setScore("dscore","dbar",c,DRILL.length,"d");
+}
+
+/* ===================== SECUENCIA DE FASES ===================== */
+function renderSeq(){
+  const disp=shuffle(PHASES.map((_,i)=>i));
+  document.getElementById("seq").innerHTML=disp.map((idx,k)=>{
+    const ph=PHASES[idx];
+    return `<div class="seqrow" data-theme="${TH[k%3]}" data-pos="${ph.pos}">
+      <span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${IC[ph.ic]}</svg></span>
+      <div class="sinfo"><b>${esc(ph.t)}</b><span>${esc(ph.d)}</span></div>
+      <select aria-label="Posición de ${esc(ph.t)}"><option value="">—</option>
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+    </div>`;
+  }).join("");
+}
+function checkSeq(){
+  let c=0;
+  document.querySelectorAll("#seq .seqrow").forEach(row=>{
+    const pos=row.dataset.pos; const sel=row.querySelector("select"); row.classList.remove("good","bad");
+    if(sel.value==="") return;
+    const ok=sel.value===pos; row.classList.add(ok?"good":"bad"); if(ok) c++;
+  });
+  setScore("sscore","sbar",c,PHASES.length,"s");
+}
+
+/* ===================== INIT ===================== */
+renderVocab();
+let MORDER=renderMatch("mdefs","mterms",TERMS.map(t=>({t:t.t,d:t.d})));
+let RDATA=buildMCQ(RMCQ); renderMCQ("rmcq",RDATA,"r");
+renderDrill();
+renderSeq();
+
+document.getElementById("mcheck").onclick=()=>checkMatch("mterms",MORDER,TERMS,"mscore","mbar","m");
+document.getElementById("mreset").onclick=()=>{MORDER=renderMatch("mdefs","mterms",TERMS.map(t=>({t:t.t,d:t.d})));setScore("mscore","mbar",0,10,"m");};
+document.getElementById("rcheck").onclick=()=>checkMCQ("rmcq",RDATA,"rscore","rbar","r");
+document.getElementById("rreset").onclick=()=>{RDATA=buildMCQ(RMCQ);renderMCQ("rmcq",RDATA,"r");resetMCQ("rmcq","rscore","rbar",RMCQ.length,"r");};
+document.getElementById("dcheck").onclick=()=>checkDrill(false);
+document.getElementById("dreveal").onclick=()=>checkDrill(true);
+document.getElementById("dreset").onclick=()=>{renderDrill();setScore("dscore","dbar",0,10,"d");};
+document.getElementById("scheck").onclick=checkSeq;
+document.getElementById("sreset").onclick=()=>{renderSeq();setScore("sscore","sbar",0,3,"s");};
+refreshGlobal();
+</script>
+</body>
+</html>
